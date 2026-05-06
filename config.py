@@ -3,8 +3,8 @@ class Config:
 
         self.train_file = '/share/home/xiabing/ssc_jobs/MOLDE/data/pubchem_all/train.h5'
         self.val_file = '/share/home/xiabing/ssc_jobs/MOLDE/data/pubchem_all/val.h5'
-        self.inchi_vocab_path = '/share/home/xiabing/ssc_jobs/MOLDE/data/static_tokenizer_inchi.txt'
-        self.smiles_vocab_path = '/share/home/xiabing/ssc_jobs/MOLDE/data/static_tokenizer_smiles.txt'
+        self.inchi_vocab_path = '/data/static_tokenizer_inchi.txt'
+        self.smiles_vocab_path = '/data/static_tokenizer_smiles.txt'
         self.save_dir = './lstm_cnn'
         self.inchi_padding_idx = 0
         self.smiles_padding_idx = 0
