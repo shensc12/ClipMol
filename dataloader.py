@@ -119,7 +119,6 @@ class CollateFn:
         inchi_list = [item[0] for item in batch]
         smiles_list = [item[1] for item in batch]
 
-        # 动态 Padding
         inchi_batch = pad_sequence(inchi_list, batch_first=True, padding_value=self.inchi_pad_idx)
         smiles_batch = pad_sequence(smiles_list, batch_first=True, padding_value=self.smiles_pad_idx)
 
@@ -127,7 +126,7 @@ class CollateFn:
 
 
 def get_dataloader(config, mode='train'):
-    config.mode = mode  # <--- 加上这一行！
+    config.mode = mode  
 
     inchi_tok = ChemTokenizer(config.inchi_vocab_path, mode='inchi')
     smiles_tok = ChemTokenizer(config.smiles_vocab_path, mode='smiles')
